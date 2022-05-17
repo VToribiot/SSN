@@ -44,12 +44,12 @@ def main():
             print("\nThe Social Security Number is invalid")
 
         while True:
-            question = input("Do you want to leave the program: (y/n) ")
+            question = input("\nDo you want to leave the program (y/n): ")
             if question.lower() == 'y':
-                print("Thank you for using the program!!")
+                print("\nThank you for using the program!!")
                 control = False
                 break
-            elif question.lower() != 'y' or question.lower() != 'n':
+            elif question.lower() != 'y' and question.lower() != 'n':
                 print("You entered an invalid option, please try again")
             else:
                 break
