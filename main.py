@@ -6,12 +6,13 @@
 
 def string_validation(s):
     if s.count('-') != 2:
-        return  False
-    s = s.replace('-')
+        return False
+    s = s.replace('-', '')
     if s.isnumeric() and len(s) != 9:
         return False
 
     return True
+
 
 def check(n):
 
@@ -28,10 +29,12 @@ def check(n):
 def main():
     print("Welcome to the Social Security Number Validator")
 
-    SSN = input("Enter the Social Security Number Validator")
-    if string_validation(SSN):
+    ssn = input("\nEnter the Social Security Number Validator: ")
+    if string_validation(ssn):
         # s = SSN.split('-')
-        if check(SSN.split('-')):
-            print("The Social Security Number is valid!!")
+        if check(ssn.split('-')):
+            print("\nThe Social Security Number is valid!!")
         else:
-            print("The Social Security Number is invalid")
+            print("\nThe Social Security Number is invalid")
+
+main()
