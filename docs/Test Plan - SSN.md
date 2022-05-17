@@ -52,16 +52,16 @@ The following tests will be executed with unittest python native package in the 
 
 | Test Name  | Component  | Description| Input  | Expected Result  | Test Result  |
 |:---:|---|---|---|---|:---:|
-| test01  |  check | Validates the 1st part has 3 digits  | 12-56-9715  | False  |   |
-| test02  |  check | Validates the 2nd part has 2 digits  | 137-1-8468  | False  |   |
-| test03  | check  | Validates the 3rd part has 4 digits  | 198-65-13  | False  |   |
-| test04  | check  | Validates the 1st section is not 000  | 000-51-3854  | False  |   |
-| test05  | check  | Validates the 1st section is not 666  | 666-17-3546  | False  |   |
-| test06  | check  | Validates the 1st section is not between 900 or 999  | 943-34-1389  | False  |   |
-|test07| check| Validates the 2nd section is between 01 and 99|123-00-4683 |False | |
-|test08 |check |Validates the 3rd section is between 0001 and 9999|123-09-0000 |False | |
-|test09 | check |Validates a Social Security Number |357-54-9878 |True | |
-| test10 | string_validation  | Validates the number doesn't have a non-hyphen symbol  | 13?-48-118/  | False  |   |
-| test11 | string_validation  | Validates the number doesn't have 9 digits  | 12-5-384  | False  |   |
-| test12  | string_validation | Validates the number doesn't have letters  | 159-w4-3848  | False  |   |
-| test13  | string_validation | Validates the number have 9 digits  | 123-45-6789  | True  |   |
+| test01  |  check | Validates the 1st part has 3 digits  | 12-56-9715  | False  | ok  |
+| test02  |  check | Validates the 2nd part has 2 digits  | 137-1-8468  | False  | ok  |
+| test03  | check  | Validates the 3rd part has 4 digits  | 198-65-13  | False  | ok  |
+| test04  | check  | Validates the 1st section is not 000  | 000-51-3854  | False  |  ok |
+| test05  | check  | Validates the 1st section is not 666  | 666-17-3546  | False  | ok  |
+| test06  | check  | Validates the 1st section is not between 900 or 999  | 943-34-1389  | False  | ok  |
+|test07| check| Validates the 2nd section is between 01 and 99|123-00-4683 |False | ok |
+|test08 |check |Validates the 3rd section is between 0001 and 9999|123-09-0000 |False | ok|
+|test09 | check |Validates a Social Security Number |357-54-9878 |True | ok |
+| test10 | string_validation  | Validates the number doesn't have a non-hyphen symbol  | 13?-48-118/  | False  | ok  |
+| test11 | string_validation  | Validates the number doesn't have 9 digits  | 12-5-384  | False  | ok  |
+| test12  | string_validation | Validates the number doesn't have letters  | 159-w4-3848  | False  | ok  |
+| test13  | string_validation | Validates the number have 9 digits  | 123-45-6789  | True  | ok  |
