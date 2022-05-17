@@ -29,12 +29,29 @@ def check(n):
 def main():
     print("Welcome to the Social Security Number Validator")
 
-    ssn = input("\nEnter the Social Security Number Validator: ")
-    if string_validation(ssn):
-        # s = SSN.split('-')
+    control = True
+    while control:
+        while True:
+            ssn = input("\nEnter the Social Security Number Validator: ")
+            if string_validation(ssn):
+                break
+            else:
+                print("You entered an invalid input, please try again")
+
         if check(ssn.split('-')):
             print("\nThe Social Security Number is valid!!")
         else:
             print("\nThe Social Security Number is invalid")
+
+        while True:
+            question = input("Do you want to leave the program: (y/n) ")
+            if question.lower() == 'y':
+                print("Thank you for using the program!!")
+                control = False
+                break
+            elif question.lower() != 'y' or question.lower() != 'n':
+                print("You entered an invalid option, please try again")
+            else:
+                break
 
 main()
