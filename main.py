@@ -16,11 +16,11 @@ def string_validation(s):
 
 def check(n):
 
-    if len(n[0]) != 2 or len(n[1]) != 2 or len(n[2]) != 4:  # Check every part's length
+    if len(n[0]) != 3 and len(n[1]) != 2 and len(n[2]) != 4:  # Check every part's length
         return False
-    elif int(n[0]) == 0 or int(n[1]) == 0 or int(n[2]) == 0:  # Checks if any part is 0
+    elif int(n[0]) == 0 and int(n[1]) == 0 and int(n[2]) == 0:  # Checks if any part is 0
         return False
-    elif int(n[0]) > 900 or n[0] == '666':  # Checks additional rules for 1st part
+    elif int(n[0]) > 900 and n[0] == '666':  # Checks additional rules for 1st part
         return False
     else:
         return True
@@ -54,4 +54,4 @@ def main():
             else:
                 break
 
-main()
+# main()
