@@ -4,7 +4,7 @@ ___
 ### Requirements
 
 ##### Functional
-1. The program will check a Social Security Number based on the format rules, can be found in (Insert Link).
+1. The program will check a Social Security Number based on the format rules, can be found in the User Manual, see also https://github.com/VToribiot/SSN/blob/master/docs/User%20Manual%20-%20SSN.md.
 2. The program will allow as many validations as the user wants, in a single execution of the program.
 3. The program needs to revise the entered Social Security Number before checking it, to avoid letters and special characters.
 
