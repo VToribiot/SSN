@@ -1,17 +1,11 @@
-# It should have 9 digits.
-# It should be divided into 3 parts by hyphen (-).
-# The first part should have 3 digits and should not be 000, 666, or between 900 and 999.
-# The second part should have 2 digits and it should be from 01 to 99.
-# The third part should have 4 digits and it should be from 0001 to 9999.
-
 import os
 
 
 def string_validation(s):
-    if s.count('-') != 2:
+    if s.count('-') != 2:  # Checks the number of hyphens that needs to have the SSN
         return False
     s = s.replace('-', '')
-    if not s.isnumeric() or len(s) != 9:
+    if not s.isnumeric() or len(s) != 9:  # Checks the SSN has 9 digits
         return False
 
     return True
@@ -35,13 +29,13 @@ def main():
     control = True
     while control:
         while True:
-            ssn = input("\nEnter the Social Security Number Validator: ")
-            if string_validation(ssn):
+            ssn = input("\nEnter the Social Security Number Validator: ")  # Asks for the SSN
+            if string_validation(ssn): # Invokes the input validation function
                 break
             else:
                 print("You entered an invalid input, please try again")
 
-        if check(ssn.split('-')):
+        if check(ssn.split('-')):  # Invokes the SSN Validator Function
             print("\nThe Social Security Number is valid!!")
         else:
             print("\nThe Social Security Number is invalid")
