@@ -1,16 +1,22 @@
-# This is a sample Python script.
+# It should have 9 digits.
+# It should be divided into 3 parts by hyphen (-).
+# The first part should have 3 digits and should not be 000, 666, or between 900 and 999.
+# The second part should have 2 digits and it should be from 01 to 99.
+# The third part should have 4 digits and it should be from 0001 to 9999.
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def string_validation(s):
+    if s.count('-') != 2:
+        return  False
+    s = s.replace('-')
+    if s.isnumeric() and len(s) != 9:
+        return False
+
+    return True
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    print("Welcome to the Social Security Number Validator")
 
+    SSN = input("Enter the Social Security Number Validator")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # string_validation function
