@@ -13,10 +13,22 @@ def string_validation(s):
 
     return True
 
+def check(n):
+
+    if len(n[0]) != 2 or len(n[1]) != 2 or len(n[2]) != 4:  # Check every part's length
+        return False
+    elif int(n[0]) == 0 or int(n[1]) == 0 or int(n[2]) == 0:  # Checks if any part is 0
+        return False
+    elif int(n[0]) > 900 or n[0] == '666':  # Checks additional rules for 1st part
+        return False
+    else:
+        return True
+
 
 def main():
     print("Welcome to the Social Security Number Validator")
 
     SSN = input("Enter the Social Security Number Validator")
-
-    # string_validation function
+    if string_validation(SSN):
+        s = SSN.split('-')
+        # check
