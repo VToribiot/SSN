@@ -47,4 +47,4 @@ def run():
     suite = u.TestLoader().loadTestsFromTestCase(MyTestCase)
     u.TextTestRunner(verbosity=3).run(suite)
 
-run()
+# run()
