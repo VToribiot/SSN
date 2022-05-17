@@ -30,5 +30,8 @@ def main():
 
     SSN = input("Enter the Social Security Number Validator")
     if string_validation(SSN):
-        s = SSN.split('-')
-        # check
+        # s = SSN.split('-')
+        if check(SSN.split('-')):
+            print("The Social Security Number is valid!!")
+        else:
+            print("The Social Security Number is invalid")
