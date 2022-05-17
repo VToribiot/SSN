@@ -4,6 +4,9 @@
 # The second part should have 2 digits and it should be from 01 to 99.
 # The third part should have 4 digits and it should be from 0001 to 9999.
 
+import os
+
+
 def string_validation(s):
     if s.count('-') != 2:
         return False
@@ -46,12 +49,14 @@ def main():
         while True:
             question = input("\nDo you want to leave the program (y/n): ")
             if question.lower() == 'y':
-                print("\nThank you for using the program!!")
+                os.system('cls')
+                print("Thank you for using the program!!")
                 control = False
                 break
             elif question.lower() != 'y' and question.lower() != 'n':
                 print("You entered an invalid option, please try again")
             else:
+                os.system('cls')
                 break
 
-# main()
+main()
